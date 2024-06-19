@@ -13,10 +13,7 @@
 - [3. _Integrantes_](#3-integrantes)
 - [4. _Orientadores_](#4-orientadores)
 - [5. Sobre](#5-sobre)
-- [6. Tecnologias utilizadas](#6-tecnologias-utilizadas)
-- [7. Licença](#7-licença)
-- [8. Conclusão](#8-conclusão)
-- [9. Lista de Projetos Integradores](#9-lista-de-projetos-integradores)
+- [6. Lista de Projetos Integradores](#6-lista-de-projetos-integradores)
 ---
 
 # 3. _Integrantes_
@@ -42,12 +39,6 @@
 > Será um aplicativo Web, que será iniciado e irá salvar o banco de dados localmente.
 ---
 
-# 6. Tecnologias utilizadas
-TBD
-# 7. Licença
-TBD
-# 8. Conclusão
-TBD
 
-# 9. Lista de Projetos Integradores
+# 6. Lista de Projetos Integradores
 Todos os Projetos integradores feitos pela Fatec Araras podem ser acessados [clicando aqui](https://github.com/orlandosaraivajr/PI_FATEC_ARARAS). Nele é possível encontrar sobre grupos anteriores, temas e as lives de apresentação dos projetos.
