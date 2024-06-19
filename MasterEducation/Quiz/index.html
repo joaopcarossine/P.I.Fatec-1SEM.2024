@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: rgba(233, 182, 248, 0.932);
+ }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.438);
+        }
+        .quiz {
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    #quiz-container {
+        max-width: 600px;
+        margin: auto;
+        background-color: #1f1f1f71;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    
+    #quiz-options button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        background-color: #333;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    #quiz-submit {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+        #hero,
+        #hero h3,
+        #hero p,
+        #hero ul,
+        #hero li {
+            text-align: left;
+        }
+
+        #hero hr {
+            border: 0;
+            height: 2px; 
+            background-color: #000; 
+            margin: 20px 0; 
+        }
+
+        .card-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            position: relative;
+            flex: 1 1 250px; 
+            border: 1px solid #1a020221;
+            border-radius: 8px;
+            padding: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: rgba(0, 255, 255, 0);
+            overflow: hidden;
+        }
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+     .card h3 {
+            margin-top: 10px;
+        }
+
+        .card p, .card ul {
+            margin-top: 10px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+      
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+#footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+#footer_logo {
+    width: 150px; 
+}
+
+
+#footer_social_media {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-link {
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.footer-list h3 {
+    margin-bottom: 10px;
+}
+
+.footer-list li {
+    margin-bottom: 5px;
+}
+
+.footer-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-list li a:hover {
+    color: #ccc;
+}
+
+/* Subscribe Section */
+#footer_subscribe h3 {
+    margin-bottom: 10px;
+}
+
+#footer_subscribe p {
+    margin-bottom: 10px;
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+}
+
+#input_group input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#input_group button {
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#input_group button:hover {
+    background-color: #555;
+}
+
+/* Footer Copyright */
+#footer_copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #footer_content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer_social_media {
+        margin: 15px 0;
+    }
+}
+        
+        
+    </style>
+</head>
+
+<body id="inicio">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background: linear-gradient(214deg, rgba(230,220,252,1) 0%, rgba(249,248,203,1) 100%);">
+        <a class="navbar-brand" href="#">
+            <img src="/MasterEducation/Quiz/img/Icone_navbar.png" width="55" height="45" >
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="padding-left: 55%;">
+          
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><li><a href="#inicio" style="color: black; font-size: 25px;">Início</a></li><span class="sr-only">(current)</span></a>
+            </li> 
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><li><a href="#about" style="color: black;font-size: 25px;">Sobre Nós</a></li><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><li><a href="#software" style="color: black;font-size: 25px;">Software</a></li><span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><li><a href="#quiz" style="color: black;font-size: 25px;">Quiz</a></li><span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><li><a href="#Contato" style="color: black;font-size: 25px;">Contato</a></li><span class="sr-only">(current)</span></a>
+              </li>           
+          </ul>
+        </div>
+      </nav>
+<br>
+    <script src="js/quizScript.js"></script>
+                 
+        
+    <header>
+        <br>
+        <br>
+        <h3>Master Education</h3>
+        <br>
+        <div class="content" style="border-radius: 2%;">
+            <h2>O Problema</h2>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="image-container">
+                        <img src="img/joven.jpg" style="width: 100%; height: auto;" alt="Imagem de exemplo">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quais são as principais causas que provocam desinteresse nos estudos?</h5>
+                            <p>O desinteresse nos estudos pode ser provocado por uma variedade de razões, e estas podem variar de pessoa para pessoa. No entanto, algumas causas comuns incluem:</p>
+                            <ul>
+                                <li><strong>Falta de motivação intrínseca:</strong> Quando os estudantes não veem significado ou propósito nos estudos, eles podem perder o interesse em aprender. Isso pode ocorrer se o conteúdo parecer irrelevante, desafiador demais ou desconectado dos interesses pessoais do aluno.</li>
+                                <li><strong>Métodos de ensino inadequados:</strong> Abordagens de ensino monótonas, desatualizadas ou que não levam em consideração a diversidade de estilos de aprendizagem dos alunos podem levar ao desinteresse e à falta de engajamento.</li>
+                                <li><strong>Falta de metas claras:</strong> Quando os objetivos educacionais não são definidos ou não há um caminho claro para alcançá-los, os estudantes podem perder a motivação.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <h2>A Solução</h2>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="image-container">
+                        <img src="img/jovens.jpg" style="width: 100%; height: auto;" alt="Imagem de exemplo">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Transformando a Educação com Inovação Tecnológica: O Papel da Master Education</h5>
+                            <p>No cenário educacional contemporâneo, enfrentamos desafios complexos que demandam soluções igualmente inovadoras. Uma das principais preocupações é o desinteresse crescente dos estudantes nos estudos, influenciado por uma série de fatores, desde a falta de motivação até problemas de saúde mental e ambientes de aprendizagem desfavoráveis</p>
+                            <ul>
+                                <li><strong>Ambientes de Aprendizagem Interativos:</strong> Plataformas digitais interativas que oferecem experiências de aprendizado envolventes, permitindo que os estudantes participem ativamente do processo educacional.</li>
+                                <li><strong>Estímulo à Colaboração e Engajamento:</strong> Ferramentas que incentivam a colaboração entre os estudantes, promovendo discussões, trabalhos em grupo e projetos colaborativos que estimulam o pensamento crítico e a criatividade.</li>
+                                <li><strong>Feedback e Orientação:</strong> Sistemas de feedback imediato e orientação personalizada que ajudam os estudantes a identificarem áreas de melhoria e a desenvolverem suas habilidades de forma contínua.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+                <header id="hero">
+                    <section id="about" class="content">
+                        <h2>Sobre Nós</h2>
+                        <div class="card-section">
+                            <div class="card">
+                                <img src="img/card.jpg" alt="Missão">
+                                <div>
+                                    <h3>Nossa Missão</h3>
+                                    <p>Empoderar a educação, utilizando tecnologia para criar experiências de aprendizado interativas e envolventes. Acreditamos que todos merecem uma educação de qualidade, e estamos determinados a quebrar as barreiras que dificultam o acesso ao conhecimento.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/card.jpg" alt="Visão">
+                                <div>
+                                    <h3>Visão</h3>
+                                    <p>Ser a plataforma líder em soluções tecnológicas educacionais, reconhecida pela inovação e pela capacidade de transformar o aprendizado em uma experiência envolvente e acessível para todos.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/card.jpg" alt="Valores">
+                                <div>
+                                    <h3>Valores</h3>
+                                    <ul>
+                                        <li><strong>Inovação:</strong> Estamos comprometidos em desenvolver tecnologias de ponta que transformem a educação e tornem o aprendizado mais eficaz e agradável.</li>
+                                        <li><strong>Acessibilidade:</strong> Acreditamos que a educação de qualidade deve estar ao alcance de todos, independentemente de suas circunstâncias.</li>
+                                        <li><strong>Interatividade:</strong> Criamos experiências de aprendizado envolventes que incentivam a participação ativa dos estudantes.</li>
+                                        <li><strong>Personalização:</strong> Reconhecemos a individualidade de cada estudante, adaptando nosso software para atender às necessidades específicas de cada um.</li>
+                                        <li><strong>Qualidade:</strong> Nos esforçamos para oferecer os melhores recursos educacionais, garantindo um currículo abrangente e atualizado.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </header>
+    <hr>
+    <section>
+    <header id="software">
+
+        <div id="intro" class="content">
+            <h3>O Software</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="image-container">
+                        <img src="img/Icone.png" style="width: 110; height: 110;" alt="Imagem de exemplo">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Quizz: Quiz Interativo</h3>
+                            <p>Quizz é um software interativo projetado para revolucionar a forma como os professores engajam os alunos durante o processo de aprendizagem. Desenvolvido com foco na educação moderna, o QuizMaster transforma a tradicional dinâmica de perguntas e respostas em uma experiência envolvente e motivadora. O software permite que os professores criem, personalizem e administrem quizzes interativos, alinhados com os objetivos educacionais e as necessidades específicas dos alunos.</p>
+                            <br>
+                            <h3><strong>Principais Funcionalidades:</strong></h3>
+                            <br>
+                            <h3>Criação Personalizada de Quizzes:</h3>
+                            <ul>
+                                <li>Os professores podem facilmente criar quizzes personalizados, selecionando entre uma variedade de formatos de perguntas, incluindo múltipla escolha, verdadeiro ou falso, respostas dissertativas e correspondência.</li>
+                                <li>Opção para adicionar multimídia às perguntas, como imagens, vídeos e áudios, para tornar o conteúdo mais dinâmico e atraente.</li>
+                            </ul>
+                    
+                            <h3>Banco de Perguntas:</h3>
+                            <ul>
+                                <li>Acesso a um banco de perguntas pré-definidas, organizadas por disciplinas e níveis de dificuldade, facilitando a criação rápida de quizzes.</li>
+                                <li>Possibilidade de os professores contribuírem com suas próprias perguntas para o banco, promovendo uma comunidade colaborativa de educadores.</li>
+                            </ul>
+                    
+                            <h3>Feedback Imediato:</h3>
+                            <ul>
+                                <li>Os alunos recebem feedback instantâneo sobre suas respostas, permitindo um entendimento imediato do que acertaram ou erraram.</li>
+                                <li>Comentários personalizados podem ser adicionados às respostas, oferecendo explicações adicionais e dicas de estudo.</li>
+                        
+            </div>
+            <button type="button" class="btn btn-primary">Acessar</button>
+        </div>
+    </div>
+    </header>
+        <section id="quiz" class="quiz">
+            <h2>Vamos testar o seu conhecimento? &#x1F604;</h2>
+        
+            <div id="quiz-container">
+                <a id="quiz-question"></a>
+                <div id="quiz-options"></div>
+              <p id="quiz-result"></p>
+              
+            </div>
+        </section>
+       
+     
+        <script src="js/quizScript.js"></script>
+        <section>
+        <header id="Contato">
+                <div id="footer_content">
+                    <div id="footer_contacts">
+                        <img src="img/Icone.png" alt="Logo" id="footer_logo">
+                        <div id="contact_info">
+                            <h3>Contato</h3>
+                            <p>Email: contact@MasterEducation.com</p>
+                            <p>Telefone: +55 (19) 1234-9890</p>
+                            <p>Endereço: 123 Araras, SP, Brasil</p>
+                        </div>
+                    </div>
+                    <div id="footer_social_media">
+                        <a href="#" class="footer-link" id="Instagram">
+                            <img src="img/instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="footer-link" id="Linkedin">
+                            <img src="img/linkedin.png" alt="linkedin" class="social-icon">
+                        </a>
+                        <a href="#" class="footer-link" id="Whatsapp">
+                            <img src="img/whatsapp.png" alt="WhatsApp" class="social-icon">
+                        </a>
+                    </div>
+                    
+                    <div id="footer_subscribe">
+                        <h3>Gostaria de Entrar?</h3>
+                        <p>Entre com o seu email</p>
+                        <div id="input_group">
+                            <input type="email" id="email">
+                            <button>
+                                <i class="fa-regular fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer_copyright">
+                    &copy; 2024 Master Education. Todos os direitos reservados.
+                </div>
+        </section>
+</body>
+</html>
